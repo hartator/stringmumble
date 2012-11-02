@@ -1,0 +1,20 @@
+<%= form_for @mumble, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :string_a, 'String A', :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :string_a, :class => 'text_area', :rows => 6 %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :string_b, 'String B', :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :string_b, :class => 'text_area', :rows => 6  %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                mumbles_path, :class => 'btn' %>
+  </div>
+<% end %>
